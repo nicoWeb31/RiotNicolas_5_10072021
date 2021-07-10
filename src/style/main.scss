@@ -1,0 +1,36 @@
+
+@import './variables';
+@import './mixin';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+//---BASE STYLES---
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+
+html {
+
+  font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 56.25%; // <1200
+  }
+  @include respond(tab-port) {
+    font-size: 50%; //<900
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sa;
+}
+
