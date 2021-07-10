@@ -7,6 +7,8 @@ import { FormModalComponent } from './components/form-modal/form-modal.component
 import { HeaderPhotographComponent } from './components/header-photograph/header-photograph.component';
 import { HomeComponent } from './components/home/home.component';
 import { PhotographComponent } from './components/photograph/photograph.component';
+import { PhotographRouting } from './photograph.-routing.module';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -21,7 +23,9 @@ import { PhotographComponent } from './components/photograph/photograph.componen
     PhotographComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PhotographRouting,
+    CoreModule,
   ]
 })
 export class PhotographModule { }

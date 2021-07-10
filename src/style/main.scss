@@ -23,7 +23,6 @@ html {
   @include respond(tab-port) {
     font-size: 50%; //<900
   }
-
   @include respond(big-desktop) {
     font-size: 75%;
   }
@@ -32,5 +31,6 @@ html {
 body {
   box-sizing: border-box;
   font-family: sa;
+  background: #E5E5E5;
 }
 
