@@ -1,11 +1,33 @@
-import { createReducer } from '@ngrx/store';
-import { initialState } from './media-state';
+import { createReducer, on } from '@ngrx/store';
+
+import {
+  getMediaError,
+  getMediaStart,
+  getMediaSuccess,
+} from './actions/media.actions';
+import { initialState, MediaState } from './media-state';
 
 /* --------------------------------- FIXME:--------------------------------- */
 
 const _mediaReducer = createReducer(
   initialState,
-
+  on(getMediaStart, (state: MediaState) => {
+    return {
+      ...state,
+    };
+  }),
+  on(getMediaSuccess, (state: MediaState, action: any) => {
+    return {
+      ...state,
+      medias: action.media,
+    };
+  }),
+  on(getMediaError, (state: MediaState, action: any) => {
+    return {
+      ...state,
+      errMessage: action.message,
+    };
+  })
 );
 
 export const mediaReducer = (state: any, action: any) => {
