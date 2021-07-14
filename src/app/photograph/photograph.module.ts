@@ -9,8 +9,9 @@ import { HomeComponent } from './components/home/home.component';
 import { PhotographComponent } from './components/photograph/photograph.component';
 import { PhotographRouting } from './photograph.-routing.module';
 import { CoreModule } from '../core/core.module';
-
-
+import { AppState } from '../store/app-state';
+import { Store } from '@ngrx/store';
+import { getMediaStart } from '../core/core-media/store/actions';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,12 @@ import { CoreModule } from '../core/core.module';
     FormModalComponent,
     HeaderPhotographComponent,
     HomeComponent,
-    PhotographComponent
+    PhotographComponent,
   ],
-  imports: [
-    CommonModule,
-    PhotographRouting,
-    CoreModule,
-  ]
+  imports: [CommonModule, PhotographRouting, CoreModule],
 })
-export class PhotographModule { }
+export class PhotographModule {
+  constructor(private store: Store<AppState>) {
+    this.store.dispatch(getMediaStart());
+  }
+}

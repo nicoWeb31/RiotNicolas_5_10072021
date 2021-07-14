@@ -11,32 +11,23 @@ import { HeaderBannerComponent } from './layout/components/header-banner/header-
 import { NavigationComponent } from './layout/components/navigation/navigation.component';
 import { appReducer } from './store/app-state';
 import { environment } from 'src/environments/environment';
+import { MediaEffect } from './core/core-media/store/media.effects';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderBannerComponent,
-    NavigationComponent
-  ],
+  declarations: [AppComponent, HeaderBannerComponent, NavigationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
     StoreModule.forRoot(appReducer),
-    // EffectsModule.forRoot([
-    //   AuthEffects,
-    //   UserEffects,
-    //   OrdersEffects,
-    //   ProductEffect,
-    //   AddressEffect,
-    //   AddressOrderEffect,
-    // ]),
+    EffectsModule.forRoot([MediaEffect]),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
     }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

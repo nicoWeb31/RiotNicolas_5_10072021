@@ -1,8 +1,10 @@
-import { MediaState } from "../media-state";
-import { createFeatureSelector } from '@ngrx/store';
-
-
+import { MediaState } from '../media-state';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 export const MEDIA_STATE_NAME = 'media';
 
-const getProductState = createFeatureSelector<MediaState>(MEDIA_STATE_NAME);
+const getMediaState = createFeatureSelector<MediaState>(MEDIA_STATE_NAME);
+
+export const getAllMedias = createSelector(getMediaState, (state) => {
+  return state.medias;
+});
