@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaService } from 'src/app/core/core-media';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mediaService: MediaService) { }
 
   ngOnInit(): void {
+    this.mediaService.getMedia().subscribe(media => {
+      console.log(media)
+    })
   }
 
 }
