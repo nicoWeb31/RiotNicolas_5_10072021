@@ -8,7 +8,7 @@ export const GET_MEDIA_FAIL = '[media page] get media fail';
 export const getMediaStart = createAction(GET_MEDIA_START);
 export const getMediaSuccess = createAction(
   GET_MEDIA_SUCCESS,
-  props<{ media: Media }>()
+  props<{ media: Media[] }>()
 );
 export const getMediaError = createAction(
   GET_MEDIA_FAIL,

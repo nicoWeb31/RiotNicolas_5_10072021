@@ -11,9 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private mediaService: MediaService) { }
 
   ngOnInit(): void {
-    this.mediaService.getMedia().subscribe(media => {
-      console.log(media)
-    })
+
   }
 
 }
