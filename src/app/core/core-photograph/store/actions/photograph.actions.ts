@@ -9,7 +9,7 @@ export const GET_PHOTOGRAPH_FAIL = '[photograph page] get photograph fail';
 export const getPhotographStart = createAction(GET_PHOTOGRAPH_START);
 export const getPhotographSuccess = createAction(
   GET_PHOTOGRAPH_SUCCESS,
-  props<{ media: Photograph[] }>()
+  props<{ photographs: Photograph[] }>()
 );
 export const getPhotographError = createAction(
   GET_PHOTOGRAPH_FAIL,

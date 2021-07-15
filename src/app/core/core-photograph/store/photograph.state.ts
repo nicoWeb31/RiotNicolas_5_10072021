@@ -1,7 +1,7 @@
-import { photograph } from "../interface";
+import { Photograph } from "../interface";
 
 export interface PhotographState {
-  photographs: photograph[] | null;
+  photographs: Photograph[] | null;
   errMessage: string | null;
   loading: boolean;
 }
