@@ -12,6 +12,7 @@ import { CoreModule } from '../core/core.module';
 import { AppState } from '../store/app-state';
 import { Store } from '@ngrx/store';
 import { getMediaStart } from '../core/core-media/store/actions';
+import { getPhotographStart } from '../core';
 
 @NgModule({
   declarations: [
@@ -28,5 +29,7 @@ import { getMediaStart } from '../core/core-media/store/actions';
 export class PhotographModule {
   constructor(private store: Store<AppState>) {
     this.store.dispatch(getMediaStart());
+    this.store.dispatch(getPhotographStart());
+
   }
 }

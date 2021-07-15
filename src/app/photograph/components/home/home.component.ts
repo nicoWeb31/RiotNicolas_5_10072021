@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { MediaService } from 'src/app/core/core-media';
-import { getMediaStart } from 'src/app/core/core-media/store/actions';
+import { getPhotograph } from 'src/app/core';
 import { getAllMedias } from 'src/app/core/core-media/store/selectors/media.selector';
 import { AppState } from 'src/app/store/app-state';
 
@@ -11,12 +10,11 @@ import { AppState } from 'src/app/store/app-state';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    private store: Store<AppState>
-  ) {}
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    
     this.store.select(getAllMedias).subscribe((medias) => console.log(medias));
+    this.store.select(getPhotograph).subscribe((photographs) => console.log(photographs));
+
   }
 }

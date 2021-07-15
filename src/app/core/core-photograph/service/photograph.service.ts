@@ -8,6 +8,6 @@ export class PhotographService {
   constructor(public http: HttpClient) {}
 
   getPhotograph(): Observable<Photograph[]> {
-    return this.http.get<Photograph[]>('/api/photograph');
+    return this.http.get<Photograph[]>('/api/photographers');
   }
 }
