@@ -1,4 +1,4 @@
-export interface photograph {
+export interface Photograph {
   name: string;
   id: number;
   city: string;
