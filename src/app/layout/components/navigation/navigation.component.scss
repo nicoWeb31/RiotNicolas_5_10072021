@@ -1,0 +1,17 @@
+@import "../../../../style/mixin";
+:host {
+  @include respond(phone) {
+    order: 3;
+  }
+}
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  span {
+    margin: 1rem;
+    cursor: pointer;
+  }
+}

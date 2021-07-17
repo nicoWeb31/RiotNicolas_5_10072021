@@ -1,9 +1,17 @@
 @import "../../../../style/variables";
 
 .home {
+  &__header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+
+  }
+
   &__title {
-    text-align: right;
-    margin: 10rem;
+
     color: $c-primary;
     font-family: DM Sans;
     font-style: normal;
