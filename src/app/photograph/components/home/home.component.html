@@ -6,7 +6,10 @@
 
   <!-- -------------------------- card photographes -------------------------- -->
   <section class = "home__photograph">
-    <app-cart-photograph></app-cart-photograph>
+    <div class="home__photograph-cards" >
+      <app-cart-photograph *ngFor="let photograph of photographes$ | async" [photograph]="photograph"></app-cart-photograph>
+
+    </div>
 
   </section>
 

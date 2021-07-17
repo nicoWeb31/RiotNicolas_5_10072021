@@ -5,6 +5,7 @@ export interface Photograph {
   country: string;
   tags: string[];
   tagline: string;
+  price: number;
   portrait: string;
 }
 

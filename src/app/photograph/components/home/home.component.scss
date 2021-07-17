@@ -1,12 +1,9 @@
-@import '../../../../style/variables';
+@import "../../../../style/variables";
 
 .home {
   &__title {
-    position: absolute;
-    width: 30.6rem;
-    height: 4.7rem;
-    left: 101.7rem;
-    top: 4.4rem;
+    text-align: right;
+    margin: 3rem;
     color: $c-primary;
     font-family: DM Sans;
     font-style: normal;
@@ -15,12 +12,11 @@
     line-height: 4.7rem;
   }
 
-
-  &__photograph{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
+  &__photograph {
+    &-cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
-
-
 }

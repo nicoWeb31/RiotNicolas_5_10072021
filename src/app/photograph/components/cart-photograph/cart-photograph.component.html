@@ -1,13 +1,19 @@
 <div class="card">
   <div class="card__head">
-    <h2 class="card__title">name</h2>
-    <h3 class="card__title-secondary">lastName</h3>
-    <p class="card__description">Lorem ipsum dolor sit amet.</p>
-    <p class="card__price">price</p>
+    <img
+      [src]="'./assets/img/photos/Photographers/' + photograph.portrait"
+      [alt]="photograph.tagline"
+      class="card__img"
+    />
+
+    <h2 class="card__title">{{ photograph.name }}</h2>
+    <h3 class="card__title-secondary">{{ photograph.city }}</h3>
+    <p class="card__description">{{ photograph.tagline }}</p>
+    <p class="card__price">{{ photograph.price }}€/jour</p>
 
     <div class="card__tag">
-      <button class="card__tag-btn">
-        <span class="card__tag-btn-content">#tag-name</span>
+      <button class="card__tag-btn" *ngFor="let tag of photograph.tags">
+        <span class="card__tag-btn-content">#{{ tag }}</span>
       </button>
     </div>
   </div>
