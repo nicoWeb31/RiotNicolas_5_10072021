@@ -13,14 +13,16 @@ import { environment } from 'src/environments/environment';
 import { MediaEffect } from './core/core-media/store/media.effects';
 import { EffectsModule } from '@ngrx/effects';
 import { PhotographEffect } from './core';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
-  declarations: [AppComponent, HeaderBannerComponent, NavigationComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
+    LayoutModule,
     StoreModule.forRoot(appReducer),
     EffectsModule.forRoot([MediaEffect,PhotographEffect]),
     StoreDevtoolsModule.instrument({

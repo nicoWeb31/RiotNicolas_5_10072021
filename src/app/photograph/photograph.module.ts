@@ -13,6 +13,7 @@ import { AppState } from '../store/app-state';
 import { Store } from '@ngrx/store';
 import { getMediaStart } from '../core/core-media/store/actions';
 import { getPhotographStart } from '../core';
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { getPhotographStart } from '../core';
     HomeComponent,
     PhotographComponent,
   ],
-  imports: [CommonModule, PhotographRouting, CoreModule],
+  imports: [CommonModule, PhotographRouting, CoreModule, LayoutModule],
 })
 export class PhotographModule {
   constructor(private store: Store<AppState>) {
