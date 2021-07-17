@@ -14,4 +14,13 @@
     font-size: 3.6rem;
     line-height: 4.7rem;
   }
+
+
+  &__photograph{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+  }
+
+
 }

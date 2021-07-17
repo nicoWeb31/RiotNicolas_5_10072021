@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { getPhotograph } from 'src/app/core';
+import { Observable } from 'rxjs';
+import { getPhotograph, Photograph } from 'src/app/core';
 import { getAllMedias } from 'src/app/core/core-media/store/selectors/media.selector';
 import { AppState } from 'src/app/store/app-state';
 
@@ -10,11 +11,12 @@ import { AppState } from 'src/app/store/app-state';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  photographes$!: Observable<Photograph[] | null>;
+
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.store.select(getAllMedias).subscribe((medias) => console.log(medias));
-    this.store.select(getPhotograph).subscribe((photographs) => console.log(photographs));
-
+    this.photographes$ = this.store.select(getPhotograph);
   }
 }

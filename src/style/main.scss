@@ -1,7 +1,6 @@
-
-@import './variables';
-@import './mixin';
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+@import "./variables";
+@import "./mixin";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap");
 
 //---BASE STYLES---
 
@@ -13,9 +12,7 @@
   box-sizing: inherit;
 }
 
-
 html {
-
   font-size: 62.5%;
   @include respond(tab-land) {
     font-size: 56.25%; // <1200
@@ -31,6 +28,22 @@ html {
 body {
   box-sizing: border-box;
   font-family: sa;
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
+.tag {
+  border: 0.5px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 11px;
+}
+
+.tag-content {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #911c1c;
+}
