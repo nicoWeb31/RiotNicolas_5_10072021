@@ -5,13 +5,16 @@
     <p class="headerPhotograph__description">{{ photograph.tagline }}</p>
 
     <!-- link vers les photograph tagg home -->
-    <div class="headerPhotograph__tags"></div>
+    <div class="headerPhotograph__tags">
+      <app-tags [tags]="photograph.tags"></app-tags>
+    </div>
   </div>
   <img
     class="headerPhotograph__img"
     [src]="'./assets/img/photos/Photographers/' + photograph.portrait"
     [alt]="photograph.name"
   />
+
 </div>
 
-<button>Contactez-moi</button>
+
