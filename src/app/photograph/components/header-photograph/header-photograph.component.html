@@ -1,12 +1,13 @@
-<div class="headerPhotograph">
+<div class="headerPhotograph" *ngIf="photograph ">
   <div class="headerPhotograph__infoContent">
-    <h1 class="headerPhotograph__title">Name</h1>
-    <h3 class="headerPhotograph__city">ville</h3>
+    <h1 class="headerPhotograph__title">{{ photograph | async }}</h1>
+    <p class="headerPhotograph__city">ville</p>
     <p class="headerPhotograph__description">desciption</p>
 
+    <!-- link vers les photograph tagg home -->
     <div class="headerPhotograph__tags"></div>
   </div>
-  <img src="" alt="">
+  <img src="" alt="Name">
 </div>
 
 <button>Contactez-moi</button>

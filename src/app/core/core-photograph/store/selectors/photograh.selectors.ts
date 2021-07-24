@@ -9,3 +9,7 @@ const getPhotoGraphState = createFeatureSelector<PhotographState>(PHOTOGRAPH_STA
 export const getPhotograph = createSelector(getPhotoGraphState, (state) => {
   return state.photographs;
 });
+
+export const photographById = ( id : number ) => createSelector(getPhotoGraphState, (state : PhotographState) => {
+  return state.photographs.find(photograph => photograph.id === id);
+})

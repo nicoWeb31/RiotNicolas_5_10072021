@@ -1,13 +1,13 @@
 import { Photograph } from "../interface";
 
 export interface PhotographState {
-  photographs: Photograph[] | null;
+  photographs: Photograph[];
   errMessage: string | null;
   loading: boolean;
 }
 
 export const initialPhotographState: PhotographState = {
-  photographs: null,
+  photographs: [],
   errMessage: null,
   loading: false,
 };

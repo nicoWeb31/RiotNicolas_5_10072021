@@ -2,13 +2,13 @@ import { Media } from '../interface';
 
 
 export interface MediaState {
-  medias: Media[] | null;
+  medias: Media[];
   errMessage: string | null;
   loading: boolean;
 }
 
 export const initialState: MediaState = {
-  medias: null,
+  medias:[],
   errMessage: null,
   loading: false,
 };
