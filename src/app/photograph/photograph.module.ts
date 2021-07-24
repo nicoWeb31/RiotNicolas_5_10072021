@@ -16,6 +16,7 @@ import { getPhotographStart } from '../core';
 import { LayoutModule } from '../layout/layout.module';
 import { CardMediaComponent } from './components/card-media/card-media.component';
 import { MediasComponent } from './components/medias/medias.component';
+import { BoxPriceLikeComponent } from './components/box-price-like/box-price-like.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MediasComponent } from './components/medias/medias.component';
     PhotographComponent,
     CardMediaComponent,
     MediasComponent,
+    BoxPriceLikeComponent,
   ],
   imports: [CommonModule, PhotographRouting, CoreModule, LayoutModule],
 })

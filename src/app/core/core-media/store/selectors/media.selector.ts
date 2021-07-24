@@ -15,3 +15,5 @@ export const mediaByPhotographId = (photographerId: number) =>
       (media) => media.photographerId === photographerId
     );
   });
+
+  

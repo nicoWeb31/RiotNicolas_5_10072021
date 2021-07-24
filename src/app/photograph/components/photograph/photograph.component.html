@@ -1,7 +1,8 @@
 <div class="photograph">
   <app-header-banner></app-header-banner>
 
-  <app-header-photograph [photograph$]="photographInfo"> </app-header-photograph>
+  <app-header-photograph [photograph$]="photographInfo$">
+  </app-header-photograph>
 
   <div class="btn__container">
     <app-button [padding]="'2rem'">Contactez-moi</app-button>
@@ -14,11 +15,13 @@
   </div>
 
   <div class="photograph__media">
-
-    <app-card-media  *ngFor="let media of medias | async" [media]="media"></app-card-media>
-
+    <app-card-media
+      *ngFor="let media of medias | async"
+      [media]="media"
+    ></app-card-media>
   </div>
 
-
-
+  <div class="photograph__price">
+    <app-box-price-like   [price]="price"  [like]="likes"></app-box-price-like>
+  </div>
 </div>
