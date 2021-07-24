@@ -8,11 +8,16 @@ import { Photograph } from 'src/app/core';
   styleUrls: ['./header-photograph.component.scss'],
 })
 export class HeaderPhotographComponent implements OnInit {
-  @Input() photograph!: Observable<Photograph | null | undefined> | null;
+  @Input() photograph$!: Observable<Photograph | null | undefined> | null;
+  photograph!:Photograph;
+
   constructor() {}
 
   ngOnInit(): void {
-    this.photograph?.subscribe((data) => {
+    this.photograph$?.subscribe((data) => {
+      if(data){
+        this.photograph = data;
+      }
       console.log(data);
     });
   }

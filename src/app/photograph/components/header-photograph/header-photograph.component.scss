@@ -1,4 +1,53 @@
 .headerPhotograph {
   background: #fafafa;
   border-radius: 5px;
+  display: flex;
+  margin: 5rem 10rem;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__infoContent {
+    margin: 5rem;
+  }
+
+  &__title {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.4rem;
+    line-height: 8.3rem;
+
+    color: #d3573c;
+  }
+
+  &__city {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+
+    color: #901c1c;
+  }
+
+  &__description {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+
+    color: #525252;
+  }
+
+  &__img {
+    display: block;
+    // margin: 0 auto;
+    margin: 5rem;
+    object-fit: cover;
+    width: 25rem;
+    height: 25rem;
+    padding: 1rem;
+    border-radius: 50%;
+  }
 }
