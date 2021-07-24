@@ -1,0 +1,17 @@
+<div class="card">
+  <img
+    class="card__img"
+    [src]="'./assets/img/photos/' + media.image"
+    [alt]="media.title"
+  />
+
+  <div class="card__title">
+    <p>
+      {{ media.title }}
+    </p>
+    <span>
+      {{ media.likes }}
+      <i class="fas fa-heart" (click)="addLike(media.id)"></i>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.photograph {
+  position: relative;
+
+&__media{
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: center;
+}
+
+}
+
+.btn__container {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}

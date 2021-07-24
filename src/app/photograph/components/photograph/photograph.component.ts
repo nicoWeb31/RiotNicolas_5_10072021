@@ -34,6 +34,6 @@ export class PhotographComponent implements OnInit {
     this.medias = this.photographId
       ? this.store.select(mediaByPhotographId(+this.photographId))
       : null;
-    // this.medias?.subscribe(data=>console.log(data))
+    this.medias?.subscribe(data=>console.log(data))
   }
 }

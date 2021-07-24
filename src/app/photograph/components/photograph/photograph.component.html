@@ -1,7 +1,24 @@
-<app-header-banner></app-header-banner>
+<div class="photograph">
+  <app-header-banner></app-header-banner>
 
-<app-header-photograph [photograph$]="photographInfo"> </app-header-photograph>
+  <app-header-photograph [photograph$]="photographInfo"> </app-header-photograph>
 
-<div class="btn__container">
-  <app-button [padding]="'2rem'">Contactez-moi</app-button>
+  <div class="btn__container">
+    <app-button [padding]="'2rem'">Contactez-moi</app-button>
+  </div>
+
+  <div class="photograph__search">
+    <label for="media"> Trier par</label>
+    <!-- todo -->
+    <select name="" id=""></select>
+  </div>
+
+  <div class="photograph__media">
+
+    <app-card-media  *ngFor="let media of medias | async" [media]="media"></app-card-media>
+
+  </div>
+
+
+
 </div>

@@ -1,6 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
 import {
+  addLikeMedia,
   getMediaError,
   getMediaStart,
   getMediaSuccess,
@@ -26,6 +27,19 @@ const _mediaReducer = createReducer(
     return {
       ...state,
       errMessage: action.message,
+    };
+  }),
+  on(addLikeMedia, (state: MediaState, action: any) => {
+    return {
+      ...state,
+      medias: state.medias.map((media) => {
+        if (media.id === action.id) {
+          const newMed = {...media};
+          newMed.likes = media.likes + 1 ;
+          return newMed;
+        }
+        return media;
+      }),
     };
   })
 );

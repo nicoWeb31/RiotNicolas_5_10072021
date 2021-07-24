@@ -14,6 +14,8 @@ import { Store } from '@ngrx/store';
 import { getMediaStart } from '../core/core-media/store/actions';
 import { getPhotographStart } from '../core';
 import { LayoutModule } from '../layout/layout.module';
+import { CardMediaComponent } from './components/card-media/card-media.component';
+import { MediasComponent } from './components/medias/medias.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { LayoutModule } from '../layout/layout.module';
     HeaderPhotographComponent,
     HomeComponent,
     PhotographComponent,
+    CardMediaComponent,
+    MediasComponent,
   ],
   imports: [CommonModule, PhotographRouting, CoreModule, LayoutModule],
 })
