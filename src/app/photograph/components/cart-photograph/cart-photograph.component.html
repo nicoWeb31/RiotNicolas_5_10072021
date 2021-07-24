@@ -1,10 +1,12 @@
 <div class="card">
   <div class="card__head">
-    <img
-      [src]="'./assets/img/photos/Photographers/' + photograph.portrait"
-      [alt]="photograph.tagline"
-      class="card__img"
-    />
+    <a [routerLink]="['/photograph',photograph.id]" routerLinkActive="router-link-active">
+      <img
+        [src]="'./assets/img/photos/Photographers/' + photograph.portrait"
+        [alt]="photograph.tagline"
+        class="card__img"
+      />
+    </a>
 
     <h2 class="card__title">{{ photograph.name }}</h2>
     <h3 class="card__title-secondary">{{ photograph.city }}</h3>

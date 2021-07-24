@@ -20,3 +20,9 @@ export class HomeComponent implements OnInit {
     this.photographes$ = this.store.select(getPhotograph);
   }
 }
+
+
+// En cliquant sur une étiquette (tag) dans la barre de navigation, la liste des
+// photographes est filtrée pour n'afficher que ceux qui correspondent à cette
+// étiquette.
+
