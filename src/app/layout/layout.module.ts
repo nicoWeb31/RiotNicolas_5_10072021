@@ -4,6 +4,7 @@ import * as layoutComponent from './components';
 import { RouterModule } from '@angular/router';
 import { TagsComponent } from './components/tags/tags.component';
 import { ButtonComponent } from './components/button/button.component';
+import { DropDownComponent } from './components/drop-down/drop-down.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { ButtonComponent } from './components/button/button.component';
     layoutComponent.NavigationComponent,
     layoutComponent.TagsComponent,
     layoutComponent.ButtonComponent,
+    DropDownComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [

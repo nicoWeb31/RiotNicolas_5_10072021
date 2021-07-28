@@ -1,17 +1,30 @@
 .photograph {
   position: relative;
 
-&__media{
-  display: flex;
-  flex-wrap:  wrap;
-  justify-content: center;
-}
+  &__media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  &__search {
+    //   Font family: DM Sans
+    // Font style: Bold
+    // Font size: 18px
+    // Line height: 23px
+    // Line height: 100%
+    // Align: Left
+    // Vertical align: Top
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    
+  }
 }
 
 .btn__container {
   position: absolute;
-  top: 50%;
+  top: 35rem;
   left: 45%;
   transform: translate(-50%, -50%);
 }
