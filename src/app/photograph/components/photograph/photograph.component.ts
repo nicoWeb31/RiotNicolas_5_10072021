@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { map, pluck } from 'rxjs/operators';
-import { getPhotograph, Media, Photograph, photographById } from 'src/app/core';
+import { map } from 'rxjs/operators';
+import { Media, Photograph, photographById } from 'src/app/core';
 import { mediaByPhotographId } from 'src/app/core/core-media/store';
 import { AppState } from 'src/app/store/app-state';
 
