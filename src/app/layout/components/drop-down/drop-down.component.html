@@ -22,9 +22,11 @@
 </div>
 
 
-<!-- <div>
-  <button > Popularité </button>
-  <button > Date </button>
-  <button > Titre </button>
-
-</div> -->
+<div class="dropdown" #dropdown>
+  <button (click)="operDropdown()" class="dropbtn">Popularité</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
