@@ -49,5 +49,13 @@ export class PhotographComponent implements OnInit {
         this.likes = totalLikes;
         console.log(this.likes)
       });
-  }
+    }
+
+
+    filterPhotos(e : any){
+      console.log(e)
+    }
+
+
+
 }

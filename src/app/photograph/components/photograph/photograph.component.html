@@ -9,9 +9,9 @@
   </div>
 
   <div class="photograph__search">
-    <label for="media"> Trier par</label>
-    <!-- todo -->
-    <select name="" id=""></select>
+
+
+    <app-drop-down (emitFilter)="filterPhotos($event)" ></app-drop-down>
   </div>
 
   <div class="photograph__media">
@@ -22,6 +22,6 @@
   </div>
 
   <div class="photograph__price">
-    <app-box-price-like   [price]="price"  [like]="likes"></app-box-price-like>
+    <app-box-price-like [price]="price" [like]="likes"></app-box-price-like>
   </div>
 </div>

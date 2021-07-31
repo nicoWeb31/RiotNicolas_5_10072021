@@ -1,20 +1,30 @@
-<div class="container">
-  <h1>Angular Select Dropdown Example - tutsmake.com</h1>
-
-  <form [formGroup]="form" (ngSubmit)="submit()">
-
-      <div class="form-group">
-          <label for="website">Website:</label>
-          <select formControlName="website" class="form-control">
-              <option disabled>Select Website</option>
-              <option>Choose Website</option>
-              <option *ngFor="let web of websiteList">{{web}}</option>
-          </select>
-          <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
-              <div *ngIf="f.website.errors.required">Name is required.</div>
-          </div>
-      </div>
-
-      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+<div class="dropMenu">
+  <form [formGroup]="form">
+    <div class="">
+      <label class="dropMenu__label"> Trier par : </label>
+      <select
+        formControlName="filters"
+        class="dropMenu__btn"
+        (ngModelChange)="setValue($event)"
+        value="Popularité"
+      >
+        <option
+          class="dropMenu__option"
+          value="popularity"
+        >
+          Popularité
+        </option>
+        <option class="dropMenu__option" value="date"><span class="dropMenu__option--Date">Date</span></option>
+        <option class="dropMenu__option" value="title">Titre</option>
+      </select>
+    </div>
   </form>
 </div>
+
+
+<!-- <div>
+  <button > Popularité </button>
+  <button > Date </button>
+  <button > Titre </button>
+
+</div> -->

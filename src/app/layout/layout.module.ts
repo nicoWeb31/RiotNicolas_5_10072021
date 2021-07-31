@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { TagsComponent } from './components/tags/tags.component';
 import { ButtonComponent } from './components/button/button.component';
 import { DropDownComponent } from './components/drop-down/drop-down.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,14 +13,15 @@ import { DropDownComponent } from './components/drop-down/drop-down.component';
     layoutComponent.NavigationComponent,
     layoutComponent.TagsComponent,
     layoutComponent.ButtonComponent,
-    DropDownComponent,
+    layoutComponent.DropDownComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   exports: [
     layoutComponent.HeaderBannerComponent,
     layoutComponent.NavigationComponent,
     layoutComponent.TagsComponent,
     layoutComponent.ButtonComponent,
+    layoutComponent.DropDownComponent
   ],
 })
 export class LayoutModule {}

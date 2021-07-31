@@ -1,0 +1,26 @@
+:host {
+}
+
+.dropMenu {
+  margin: 5rem 10rem;
+
+  &__btn {
+    padding: 2rem;
+    color: #ffffff;
+    background-color: #901c1c;
+  }
+
+  &__option {
+    font-weight: bold;
+
+
+    &--date {
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      border-top: 1px solid white;
+      background-color:  white;
+
+      padding: 2rem;
+    }
+  }
+}
