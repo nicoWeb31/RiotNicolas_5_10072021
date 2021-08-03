@@ -3,71 +3,48 @@
 
 .dropMenu {
   margin: 5rem 10rem;
-
-  &__btn {
-    padding: 2rem;
-    color: #ffffff;
-    background-color: #901c1c;
-  }
-
-  &__option {
-    font-weight: bold;
-
-
-    &--date {
-      font-size: 1.8rem;
-      line-height: 2.3rem;
-      border-top: 1px solid white;
-      background-color:  white;
-
-      padding: 2rem;
-    }
-  }
-}
-
-
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
   border: none;
-  cursor: pointer;
+  // cursor: pointer;
+  border-radius: 0.5rem;
 }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+  display: block;
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #901c1c;
   z-index: 1;
+  width: 17rem;
+  border-radius: 5px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: DM Sans;
+
+  span {
+  }
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.dropbtn {
+  background-color: #901c1c;
+  color: white;
+  // width: 17rem;
+  border-radius: 5px;
+  width: 100%;
+  padding: 2rem;
+  font-weight: bold;
+  font-family: DM Sans;
+  font-size: 2rem;
+}
+
+.show {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.btSpan {
+  display: inline-block;
+  padding: 2rem;
+  cursor: pointer;
+  width: 17rem;
+  border-top: 1px solid white;
+}

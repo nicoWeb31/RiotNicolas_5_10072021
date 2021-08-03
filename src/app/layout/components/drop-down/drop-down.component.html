@@ -21,10 +21,10 @@
   </form>
 </div> -->
 
-<div class="dropdown" #dropdown>
-  <button (click)="operDropdown()" class="dropbtn">Popularité</button>
+<div class=" dropMenu" #dropdown>
+  <span (click)="openDropdown()" class="dropbtn btSpan">Popularité</span>
   <div id="myDropdown" class="dropdown-content">
-    <span (click)="filterPopularity()">Popularité</span>
-    <span (click)="filterTitle()">Titre</span>
+    <span (click)="filterDate()" class = "btSpan">Date</span>
+    <span (click)="filterTitle()" class = "btSpan">Titre</span>
   </div>
 </div>

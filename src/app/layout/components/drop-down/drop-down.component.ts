@@ -19,7 +19,7 @@ export class DropDownComponent {
     this.myDropdown = document.getElementById('myDropdown');
   }
 
-  operDropdown() {
+  openDropdown() {
     this.myDropdown?.classList.toggle('show');
   }
 
@@ -34,6 +34,11 @@ export class DropDownComponent {
 
   filterTitle() {
     this.emitEvent('title');
+    this.myDropdown?.classList.toggle('show');
+  }
+
+  filterDate() {
+    this.emitEvent('date');
     this.myDropdown?.classList.toggle('show');
   }
 }
