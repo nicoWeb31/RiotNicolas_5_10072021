@@ -1,4 +1,4 @@
-<div class="dropMenu">
+<!-- <div class="dropMenu">
   <form [formGroup]="form">
     <div class="">
       <label class="dropMenu__label"> Trier par : </label>
@@ -19,14 +19,12 @@
       </select>
     </div>
   </form>
-</div>
-
+</div> -->
 
 <div class="dropdown" #dropdown>
   <button (click)="operDropdown()" class="dropbtn">Popularité</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <span (click)="filterPopularity()">Popularité</span>
+    <span (click)="filterTitle()">Titre</span>
   </div>
 </div>
