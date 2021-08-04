@@ -22,7 +22,12 @@
 </div> -->
 
 <div class=" dropMenu" #dropdown>
-  <span (click)="openDropdown()" class="dropbtn btSpan">Popularité</span>
+  <div (click)="openDropdown()" class="dropbtn btSpan">
+    <span>Popularité</span>
+    <i *ngIf="!toggleIcon" class="fas fa-caret-down"></i>
+    <i *ngIf="toggleIcon" class="fas fa-caret-up"></i>
+
+  </div>
   <div id="myDropdown" class="dropdown-content">
     <span (click)="filterDate()" class = "btSpan">Date</span>
     <span (click)="filterTitle()" class = "btSpan">Titre</span>

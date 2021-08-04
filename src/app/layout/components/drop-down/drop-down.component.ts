@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class DropDownComponent {
   @Output() emitFilter = new EventEmitter<string>();
   myDropdown!: any;
-
+  toggleIcon: boolean = false;
   clickEvent$!: Observable<Event>;
 
   constructor() {}
@@ -21,6 +21,7 @@ export class DropDownComponent {
 
   openDropdown() {
     this.myDropdown?.classList.toggle('show');
+    this.toggleIcon = !this.toggleIcon;
   }
 
   emitEvent(event: string) {
@@ -30,15 +31,18 @@ export class DropDownComponent {
   filterPopularity() {
     this.emitEvent('popularity');
     this.myDropdown?.classList.toggle('show');
+    this.toggleIcon = !this.toggleIcon;
   }
 
   filterTitle() {
     this.emitEvent('title');
     this.myDropdown?.classList.toggle('show');
+    this.toggleIcon = !this.toggleIcon;
   }
 
   filterDate() {
     this.emitEvent('date');
     this.myDropdown?.classList.toggle('show');
+    this.toggleIcon = !this.toggleIcon;
   }
 }
